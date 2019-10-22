@@ -23,3 +23,9 @@ Then /I should see all the movies/ do
     step %{I should see "#{movie.title}"}
   end
 end
+
+#HW code
+Then /^the director of "(.*)" should be "(.*)"$/ do |field, value|
+  movie = Movie.find_by_title(field)
+  expect( movie.director == value )
+end
