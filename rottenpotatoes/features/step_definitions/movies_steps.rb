@@ -29,3 +29,12 @@ Then /^the director of "(.*)" should be "(.*)"$/ do |field, value|
   movie = Movie.find_by_title(field)
   expect( movie.director == value )
 end
+  
+#Then /^(?:|I )should be on the Similar Movies page for "(.+)"$/ do |page_name|
+#  current_path = URI.parse(current_url).path
+#  if current_path.respond_to? :should
+#    current_path.should == path_to(page_name)
+#  else
+#    assert_equal path_to(page_name), current_path
+#  end
+#end

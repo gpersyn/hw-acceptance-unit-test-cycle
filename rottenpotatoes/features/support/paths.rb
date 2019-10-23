@@ -17,6 +17,10 @@ module NavigationHelpers
       
     # Add more mappings here.
     when /^the\s?edit\s?page\s?for\s?"(.*)"$/ then edit_movie_path( Movie.find_by(title: $1).id )
+      
+    when /^the details page for "(.*)"$/ then movie_path( Movie.find_by(title: $1) )
+      
+   
 
 
     else
