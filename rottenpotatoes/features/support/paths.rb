@@ -20,8 +20,8 @@ module NavigationHelpers
       
     when /^the details page for "(.*)"$/ then movie_path( Movie.find_by(title: $1) )
       
-   
-
+    when /^the Similar Movies page for "(.+)"/ then similar_movie_path($1)
+      
 
     else
       begin
